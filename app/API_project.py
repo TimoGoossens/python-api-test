@@ -8,6 +8,6 @@ player = [{"naam": "aisaacson0", "mmr": 2436, "level": 208}, {"naam": "bnardoni1
           {"naam": "jklugman2", "mmr": 1960, "level": 1023}]
 
 
-@app.get("/percentage")
+@app.get("/player")
 async def get_player():
     return random.choice(player)
