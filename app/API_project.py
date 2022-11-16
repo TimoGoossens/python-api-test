@@ -11,3 +11,7 @@ player = [{"naam": "aisaacson0", "mmr": 2436, "level": 208}, {"naam": "bnardoni1
 @app.get("/player")
 async def get_player():
     return random.choice(player)
+
+@app.get("/player/name")
+async def get_player_name():
+    return random.choice(player[1])
