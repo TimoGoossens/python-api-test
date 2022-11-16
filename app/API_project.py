@@ -4,8 +4,8 @@ from random import randint
 from fastapi import FastAPI
 
 app = FastAPI()
-player = [{"naam": "aisaacson0", "mmr": 2436, "level": 208}, {"naam": "bnardoni1", "mmr": 3759, "level": 1141},
-          {"naam": "jklugman2", "mmr": 1960, "level": 1023}]
+player = [{'naam': "aisaacson0", "mmr": 2436, "level": 208}, {'naam': "bnardoni1", "mmr": 3759, "level": 1141},
+          {'naam': "jklugman2", "mmr": 1960, "level": 1023}]
 
 
 @app.get("/player")
