@@ -6,11 +6,11 @@
     <div x-data="{
         responsedata: null,
         async getData() {
-            this.responsedata = await (await fetch('http://127.0.0.1:8000/player')).json();
+            this.responsedata = await (await fetch('http://127.0.0.1:8000/players')).json();
         }
     }">
         <button x-on:click="getData">Send get request</button>
-        Data returned: <strong x-text="responsedata[0].name">Placeholder</strong>
+        Data returned: <strong x-text="responsedata[0].naam">Placeholder</strong>
     </div>
 </body>
 </html>
