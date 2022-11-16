@@ -15,5 +15,5 @@ async def get_player():
 @app.get("/player/name")
 async def get_player_name():
     random_name = random.choice(player)
-    
+
     return random_name["name"] 
