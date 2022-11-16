@@ -13,7 +13,7 @@
     
     </script>
     
-    <h2>Alle players uit de lijst</h2>
+    <h3>lijst met alle players</h3>
     <ul x-data="alpineInstance()" x-init="fetch('http://127.0.0.1:8000/players/all')
       .then(response => response.json())
       .then(data => players = data)">
@@ -24,7 +24,7 @@
     <div x-data="{
         responsedata: null,
         async getData() {
-            this.responsedata = await (await fetch('http://127.0.0.1:8000/players')).json();
+            this.responsedata = await (await fetch('http://127.0.0.1:8000/players/all')).json();
         }
     }">
         <button x-on:click="getData">Send get request</button>

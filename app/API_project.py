@@ -1,7 +1,17 @@
-import random 
+import random
+
 from fastapi import FastAPI
 
 app = FastAPI()
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 players = [{'naam': "aisaacson0", "mmr": 2436, "level": 208}, {'naam': "bnardoni1", "mmr": 3759, "level": 1141},
           {'naam': "jklugman2", "mmr": 1960, "level": 1023}]
 
@@ -15,4 +25,4 @@ async def return_all_players():
 async def return_specific_player(name: str):
   for player in players:
      if player.get("naam") == name:
-        return players
+        return player
