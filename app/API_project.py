@@ -13,4 +13,4 @@ async def return_all_players():
 async def return_specific_player(name: str):
   for player in players:
      if player.get("naam") == name:
-        return player
+        return players
