@@ -15,7 +15,7 @@ app.add_middleware(
 )
 
 
-class BusinessCard(BaseModel):
+class API_base(BaseModel):
     name: str
     mmr: int
     level: int
