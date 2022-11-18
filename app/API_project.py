@@ -26,18 +26,24 @@ player2 = {"name": "bnardoni1", "mmr": 3759, "level": 1141}
 player3 = {"name": "jklugman2", "mmr": 1960, "level": 1023}
 
 all_players = [player1, player2, player3]
+players = {0: player1, 1: player2, 2: player3}
 
-players = {0: player1}
+
+@app.post("/players/all")
+async def create_player(player: PlayerCard):
+    new_key = max(players, key=players.get) + 1
+    players[new_key] = player
+    return players[new_key]
 
 
 @app.get("/players/all")
 async def return_all_players():
-    return all_players
+    return players
 
 
 @app.get("/players/random")
 async def return_random_player():
-    return random.choice(all_players)
+    return random.choice(players)
 
 
 @app.get("/player/data/{name}")
@@ -47,8 +53,7 @@ async def return_specific_player(name: str):
             return player
 
 
-@app.post("/players/all")
-async def create_player(player: PlayerCard):
-    new_key = max(players, key=players.get)+1
-    players[new_key] = player
-    return all_players[new_key]
+@app.put("/players/all/1")
+async def get_item(id: int, player: PlayerCard):
+    players[id] = player
+    return player[id]
