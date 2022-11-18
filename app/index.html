@@ -1,35 +1,82 @@
 <html>
 <head>
     <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
+    <meta charset="UTF-8">
 </head>
 <body>
-    <script>
-        function alpineInstance() {
-            return {
-                players: {}
-            }
+
+  <script>
+    function alpineInstance() {
+        return {
+            players: {}
         }
-    
-    
-    </script>
-    
-    <h3>lijst met alle players</h3>
-    <ul x-data="alpineInstance()" x-init="fetch('http://127.0.0.1:8000/players/all')
-      .then(response => response.json())
-      .then(data => players = data)">
-        <template x-for="(ply) in players" :key="index">
-            <li x-text="ply.naam"></li>
-        </template>
-    </ul>
-    <div x-data="{
+    }
+
+
+</script>
+
+<h2>lijst van alle players</h2>
+<ul x-data="alpineInstance()" x-init="fetch('http://127.0.0.1:8000/players/all')
+  .then(response => response.json())
+  .then(data => players = data)">
+    <template x-for="ply in players" :key="index">
+        <li x-text="ply.name"></li>
+    </template>
+</ul>
+ <h3>klik op de knop om een random speler uit de lijst te tonen</h3>
+<div x-data="{
         responsedata: null,
         async getData() {
-            this.responsedata = await (await fetch('http://127.0.0.1:8000/players/all')).json();
+            this.responsedata = await (await fetch('http://127.0.0.1:8000/players/random')).json();
         }
     }">
+    <div>
         <button x-on:click="getData">Send get request</button>
-        Data returned: <strong x-text="responsedata[0].naam">Placeholder</strong>
+    <dl>
+        <dt>name:</dt> <strong x-text="responsedata.name">Placeholder</strong>
+        <dt>mmr:</dt><strong x-text="responsedata.mmr">Placeholder</strong>
+        <dt>level:</dt><strong x-text="responsedata.level">Placeholder</strong>
+        </dl>
+        </div>
     </div>
-    
+<div>
+    <h2>creeër een nieuwe player</h2>
+<div x-data="{
+        responsedata: null,
+        postname: null,
+        postmmr: null,
+        postlevel: null,
+        async callmethod1() {
+            this.responsedata = await (await fetch('http://127.0.0.1:8000/players/all',
+            {
+                method: 'POST',
+                body: JSON.stringify({
+                    title: this.postname,
+                    mmr: this.postmmr,
+                    level: this.postlevel,
+
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })).json();
+
+            console.log(this.responsedata);
+        },
+    }">
+
+    <input placeholder="name" type="text" x-model="postname">
+    <input placeholder="mmr" type="text" x-model="postmmr">
+    <input placeholder="level" type="text" x-model="postlevel">
+        <button  x-on:click="callmethod1">create</button>
+
+
+    <p>name that was inserted: <strong x-text="responsedata.name"></strong></p>
+    <p>mmr that was inserted: <strong x-text="responsedata.mmr"></strong></p>
+    <p>level that was inserted: <strong x-text="responsedata.level"></strong></p>
+
+    </div>
+</div>
+
 </body>
 </html>
