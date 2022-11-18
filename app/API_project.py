@@ -53,7 +53,3 @@ async def return_specific_player(name: str):
             return player
 
 
-@app.put("/players/all/1")
-async def get_item(id: int, player: PlayerCard):
-    players[id] = player
-    return player[id]
