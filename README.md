@@ -27,7 +27,7 @@ laten we beginnen met de repositories die ik heb gebruikt en dan overlopen we wa
 ![image](https://user-images.githubusercontent.com/91054406/202918780-1d725fb2-6561-4884-812a-673ae15da4c2.png)
 >index.html code
 
-`<html>
+> `<html>
 <head>
     <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
     <meta charset="UTF-8">
