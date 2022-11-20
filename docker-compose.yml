@@ -4,3 +4,8 @@ services:
   image: timogoossens/python-api-test
   ports:
     - "8000:8000"
+  volumes:
+  - sqlite_useritems_volume:/code/sqlitedb
+
+volumes:
+  sqlite_useritems_volume:
