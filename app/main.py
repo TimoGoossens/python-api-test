@@ -55,7 +55,8 @@ def read_players(skip: int = 0, limit: int = 100, db: Session = Depends(get_db))
 @app.get("/players/random", response_model=list[schemas.Player])
 def read_players(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     players = crud.get_players(db, skip=skip, limit=limit)
-    return random.choice(players)
+    random_player = random.choice(players)
+    return random_player
 
 
 @app.get("/players/{player_id}", response_model=schemas.Player)
