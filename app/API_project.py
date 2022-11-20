@@ -1,10 +1,40 @@
 import random
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
+from typing import List
+
+import databases
+import sqlalchemy
+
+
+
+# SQLAlchemy specific code, as with any other app
+DATABASE_URL = "sqlite:///./api.db"
+# DATABASE_URL = "postgresql://user:password@postgresserver/db"
+
+database = databases.Database(DATABASE_URL)
+
+metadata = sqlalchemy.MetaData()
+
+players = sqlalchemy.Table(
+    "players",
+    metadata,
+    sqlalchemy.Column("id", sqlalchemy.Integer, primary_key=True),
+    sqlalchemy.Column("name", sqlalchemy.String),
+    sqlalchemy.Column("mmr", sqlalchemy.Integer),
+    sqlalchemy.Column("level", sqlalchemy.Integer),
+)
+
+
+engine = sqlalchemy.create_engine(
+    DATABASE_URL, connect_args={"check_same_thread": False}
+)
+metadata.create_all(engine)
 app = FastAPI()
 origins = ["*"]
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -14,31 +44,38 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
+class PlayerCardIn(BaseModel):
+    name: str
+    mmr: int
+    level: int
 class PlayerCard(BaseModel):
+    id: int
     name: str
     mmr: int
     level: int
 
 
-player1 = {"name": "aisaacson0", "mmr": 2436, "level": 208}
-player2 = {"name": "bnardoni1", "mmr": 3759, "level": 1141}
-player3 = {"name": "jklugman2", "mmr": 1960, "level": 1023}
-
-all_players = [player1, player2, player3]
-players = {0: player1, 1: player2, 2: player3}
+@app.on_event("startup")
+async def startup():
+    await database.connect()
 
 
-@app.post("/players/all")
-async def create_player(player: PlayerCard):
-    new_key = max(players, key=players.get) + 1
-    players[new_key] = player
-    return players[new_key]
+@app.on_event("shutdown")
+async def shutdown():
+    await database.disconnect()
+
+@app.post("/players/create", response_model=PlayerCard)
+async def create_player(player: PlayerCardIn):
+    query = player.insert().values(name=player.name, mmr=player.mmr, level=player.level)
+    last_record_id = await database.execute(query)
+    return {**player.dict(), "id": last_record_id}
 
 
-@app.get("/players/all")
+
+@app.get("/players/all", response_model=List[PlayerCard])
 async def return_all_players():
-    return players
+    query = players.select()
+    return await database.fetch_all(query)
 
 
 @app.get("/players/random")
@@ -48,8 +85,6 @@ async def return_random_player():
 
 @app.get("/player/data/{name}")
 async def return_specific_player(name: str):
-    for player in all_players:
+    for player in players:
         if player.get("name") == name:
             return player
-
-
