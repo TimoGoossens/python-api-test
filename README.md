@@ -26,3 +26,8 @@ laten we beginnen met de repositories die ik heb gebruikt en dan overlopen we wa
 
 >in de repository zit de file index.html met de html code voor de webpagina.
 ![image](https://user-images.githubusercontent.com/91054406/202918780-1d725fb2-6561-4884-812a-673ae15da4c2.png)
+
+>webpage
+![image](https://user-images.githubusercontent.com/91054406/202919247-b5375b11-13a8-492c-a53b-cfd1834c33ca.png)
+>okteto docs
+![image](https://user-images.githubusercontent.com/91054406/202919305-366ac276-b71d-4bba-92a0-7d655fc5c251.png)
