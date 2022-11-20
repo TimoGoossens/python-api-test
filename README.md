@@ -13,12 +13,14 @@
 > Ik heb voor dit project veel informatie kunnen halen uit de oefeningen zoals randomizer.py en uit de cursus van API!
 laten we beginnen met de repositories die ik heb gebruikt en dan overlopen we wat er allemaal in zit.
 
->dit is de repository waar ik mee begonnen ben, de repository voor de API, Dockerfile, etc.
+>Dit is de repository waar ik mee begonnen ben, de repository voor de API, Dockerfile, etc. [title](https://github.com/TimoGoossens/python-api-test.git)
+>Dit word gerunned op okteto in een cloud omgeving. [title](https://api-service-timogoossens.cloud.okteto.net/)
 
 ![image](https://user-images.githubusercontent.com/91054406/202918244-4d767133-8b5b-432e-9846-09d41f1e1f46.png)
 ![image](https://user-images.githubusercontent.com/91054406/202918311-970e84b9-9d5d-47f6-a20d-d016f2a1d508.png)
 
-
+>Dit is de repository waar ik mijn webpagina op laat runnen [title](https://github.com/TimoGoossens/TimoGoossens.github.io.git)
+>Je kan mijn webpagina bezoeken op [title](https://timogoossens.github.io/)
 
 
 
