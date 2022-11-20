@@ -7,8 +7,7 @@
 
 **2.screenshots + uitleg**
 ## inleiding
-> Voor dit project heb ik een API gemaakt met een 1 POST en een aantal GET requests, deze staan ook in verbinding met een database en een webpagina! uitgebreidere beschrijving krijg je in de volgende topics.
-het thema is Rocket League --> hierbij kan je doormiddel van post en get requests oftewel spelers creëeren die dan in de database gezet worden, ofwel vraag je een random speler uit de database. de webpagina beschikt ook over een lijst met alle spelers die er reeds inzitten dat is inderdaad ook een GET request. 
+> Voor dit project heb ik een API gemaakt met een 1 POST en een aantal GET requests, deze staan ook in verbinding met een database en een webpagina! uitgebreidere beschrijving krijg je in de volgende topics. 
 
 ## **screenshots + uitleg**
 > Ik heb voor dit project veel informatie kunnen halen uit de oefeningen zoals randomizer.py en uit de cursus van API!
