@@ -399,7 +399,7 @@ header {
 
 ![image](https://user-images.githubusercontent.com/91054406/202921715-fddbf1c3-1497-4da4-b8e1-1d17e7d3d8e5.png)
 
->**Volledige openAPI Docs
+>**Volledige openAPI Docs**
 
 ![image](https://user-images.githubusercontent.com/91054406/202921862-195dfe6b-abb5-4402-aee4-54f58fa1a129.png)
 
@@ -432,6 +432,8 @@ header {
 >ik hoop dat het document en deze readme duidelijk zijn.
 >bedankt voor uw aandacht!**
 
->**Timo Goossens
->r0891940
->2ccs01**
+>**Timo Goossens**
+
+>**r0891940**
+
+>**2ccs01**
