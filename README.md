@@ -6,6 +6,11 @@
 **1.inleiding**
 
 **2.screenshots + uitleg**
+
+**3.Eindresultaat**
+
+**4.Slotwoord**
+
 ## inleiding
 > Voor dit project heb ik een API gemaakt met een 1 POST en een aantal GET requests, deze staan ook in verbinding met een database en een webpagina! uitgebreidere beschrijving krijg je in de volgende topics.
 > het thema is Rocket League --> hierbij kan je doormiddel van post en get requests oftewel spelers creëeren die dan in de database gezet worden, ofwel vraag je een random speler uit de database. de webpagina beschikt ook over een lijst met alle spelers die er reeds inzitten dat is inderdaad ook een GET request.
@@ -381,7 +386,7 @@ header {
 
 ![image](https://user-images.githubusercontent.com/91054406/202921468-cc0a9b21-f0d1-44f8-97fa-58a6506af9c8.png)
 
->**openAPI Docs
+### **openAPI Docs**
 
 ![image](https://user-images.githubusercontent.com/91054406/202921468-cc0a9b21-f0d1-44f8-97fa-58a6506af9c8.png)
 
@@ -398,8 +403,30 @@ header {
 
 ![image](https://user-images.githubusercontent.com/91054406/202921862-195dfe6b-abb5-4402-aee4-54f58fa1a129.png)
 
+## Eindresultaat
 
-### Slotwoord
+### Webpagina
+
+![image](https://user-images.githubusercontent.com/91054406/202922524-e9d7c397-9c43-4c36-b203-2027b0bd821b.png)
+
+![image](https://user-images.githubusercontent.com/91054406/202922547-7409b2fe-9b41-4bf2-9d72-4e2d6976bbfc.png)
+
+![image](https://user-images.githubusercontent.com/91054406/202922619-72388fa8-34d8-426b-925b-b51c98ae8dd6.png)
+
+>**Bij een refresh zie je dat "Brent" is toegevoegd.**
+
+![image](https://user-images.githubusercontent.com/91054406/202922655-bc7a37fa-39aa-41a0-b88c-ee06df55e678.png)
+
+### Okteto
+
+![image](https://user-images.githubusercontent.com/91054406/202922728-240a703c-4449-4259-aa93-261dfa86a423.png)
+
+![image](https://user-images.githubusercontent.com/91054406/202922754-5073eb8b-166c-433f-9e6e-c956acb3c47f.png)
+
+![image](https://user-images.githubusercontent.com/91054406/202922784-09532f79-b9df-4789-ade3-b98bd428793a.png)
+
+
+# Slotwoord
 
 >**Het was een zeer leuk project! normaal gezien ben ik niet zo voor programmeren maar nu dat er een combinatie gemaakt is met ccs en een beetje app vindt ik heel tof!
 >ik hoop dat het document en deze readme duidelijk zijn.
