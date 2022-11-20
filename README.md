@@ -16,6 +16,7 @@ laten we beginnen met de repositories die ik heb gebruikt en dan overlopen we wa
 >dit is de repository waar ik mee begonnen ben, de repository voor de API, Dockerfile, etc.
 
 ![image](https://user-images.githubusercontent.com/91054406/202918244-4d767133-8b5b-432e-9846-09d41f1e1f46.png)
+![image](https://user-images.githubusercontent.com/91054406/202918311-970e84b9-9d5d-47f6-a20d-d016f2a1d508.png)
 
 
 
