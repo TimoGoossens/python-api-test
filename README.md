@@ -428,7 +428,7 @@ header {
 
 # Slotwoord
 
->**Het was een zeer leuk project! normaal gezien ben ik niet zo voor programmeren maar nu dat er een combinatie gemaakt is met ccs en een beetje app vindt ik heel tof!
+>**Het was een zeer leuk project! normaal gezien ben ik niet zo voor programmeren maar nu dat er een combinatie gemaakt is met ccs en app vindt ik heel tof!
 >ik hoop dat het document en deze readme duidelijk zijn.
 >bedankt voor uw aandacht!**
 
