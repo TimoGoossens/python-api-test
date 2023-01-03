@@ -18,17 +18,7 @@ models.Base.metadata.create_all(bind=engine)
 print("Tables created.......")
 
 app = FastAPI()
-
-origins = [
-    http://localhost,
-
-    http://localhost:8080,
-
-    https://timogoossens.github.io/
-    ]
-
-   
-
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
